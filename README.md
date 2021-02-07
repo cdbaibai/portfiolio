@@ -51,3 +51,10 @@ function test(){
 `touch FILENAME` cvreates empty FILENAME
 
 `nano text.txt` opens nano textedit
+
+
+## git
+`git init` just one time at the bginning
+`git add .` stages all files (add the m to the bustop)
+`git commit -m "YOURMESSSAHGE"` commit your changes (lets them get into the bus)
+`git push` publish your chagnes tot GITHUB (the bus takes them to the train station)
