@@ -24,9 +24,7 @@ function test(){
 
 ## Tools
 
-
 `cd ..`  go folder up
-
 `cd - ` go to last directory
 `cd ~ ` go to home directory
 `cd ~/Downloads ` go to dl directory
@@ -54,7 +52,9 @@ function test(){
 
 
 ## git
-`git init` just one time at the bginning
-`git add .` stages all files (add the m to the bustop)
-`git commit -m "YOURMESSSAHGE"` commit your changes (lets them get into the bus)
-`git push` publish your chagnes tot GITHUB (the bus takes them to the train station)
+`git status` check current git status
+
+`git init` Just one time at the bginning
+`git add .` Stages all files (add the m to the bustop)
+`git commit -m "YOURMESSSAHGE"` Commit your changes (lets them get into the bus)
+`git push` Publish your chagnes tot GITHUB (the bus takes them to the train station)
