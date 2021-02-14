@@ -55,6 +55,17 @@ function test(){
 `git status` check current git status
 
 `git init` Just one time at the bginning
-`git add .` Stages all files (add the m to the bustop)
+`git add .` Stages all files (add the files to the bustop)
+`git add README.md` Stages JUST this file 
 `git commit -m "YOURMESSSAHGE"` Commit your changes (lets them get into the bus)
 `git push` Publish your chagnes tot GITHUB (the bus takes them to the train station)
+
+
+## npm 
+`npm install PACKAGENAME` installs a package eg: `npm install -g live-server` installed as a global
+
+`^+C` ctrl+C stops processes eg. running `live-server`
+
+## css
+`.selector` class selector - good for styling
+`#selector` id selecotr - JUST use one and more for javascript used
