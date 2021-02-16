@@ -1,7 +1,13 @@
 body {
     background-color: #eee;
+    padding-top: 70px;
 }
-
+a:visited {
+    color: black;
+}
+a:hover {
+    color: #777;
+}
 h1 {
     color: red;
 }
@@ -55,9 +61,13 @@ img {
 
 .navigation {
     display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
     background: #ffffff;
     margin: 0;
     padding: 0;
+    top: 0;
 }
 
 .navigation li {
