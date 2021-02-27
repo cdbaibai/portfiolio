@@ -79,11 +79,19 @@ img {
     transition-duration: 0.5s;
     transition-timing-function: ease;
     transition-delay: 0.2s;
+    position: relative;
 }
 
 .navigation li:hover {
     background-color: rgb(155, 59, 59);
 }
 .navigation .submenu {
+    opacity: 0;
     position: absolute;
+    left: 0%;
+    top: 0%;
+    transition: opacity .5s ease;
+}
+.navigation li:hover .submenu {
+    opacity: 1;
 }
