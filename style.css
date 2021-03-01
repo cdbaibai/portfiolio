@@ -1,7 +1,12 @@
 body {
     background-color: #eee;
-    padding-top: 70px;
+    padding-top: 340px;
 }
+@media (min-width: 500px) { 
+    body {
+        padding-top: 70px; 
+    }
+ }
 a:visited {
     color: black;
 }
@@ -67,9 +72,14 @@ img {
     background: #ffffff;
     margin: 0;
     padding: 0;
+    flex-flow: column;
     top: 0;
 }
-
+@media (min-width: 500px) { 
+    .navigation {
+        flex-flow: row;
+    }
+ }
 .navigation li {
     padding: 20px;
     background: beige;
@@ -97,4 +107,28 @@ img {
 .navigation li:hover .submenu {
     opacity: 1;
     margin-top: 0;
+}
+button {
+    background: grey;
+    border: 0;
+    padding: 12px;
+    transition: transform .2s ease-in;
+    color: white;
+}
+.container {
+    display: flex;
+    background: #ddd;
+    flex-wrap: wrap;
+}
+
+.container .card {
+    margin: 10px;
+    transition: transform .8s ease-in;
+    border: 1px solid  #ccc;
+    background-color: white;
+    padding: 5px;
+}
+
+.container .card:hover {
+    transform: scale(1.1); 
 }
