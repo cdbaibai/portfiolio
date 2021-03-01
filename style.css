@@ -7,6 +7,7 @@ body {
         padding-top: 70px; 
     }
  }
+
 a:visited {
     color: black;
 }
@@ -122,13 +123,15 @@ button {
 }
 
 .container .card {
-    margin: 10px;
     transition: transform .8s ease-in;
-    border: 1px solid  #ccc;
     background-color: white;
-    padding: 5px;
+    flex: 50%;
 }
-
+@media (min-width: 500px) { 
+    .container .card {
+        flex: 25%;
+    }
+ }
 .container .card:hover {
     transform: scale(1.1); 
 }
