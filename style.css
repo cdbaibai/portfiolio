@@ -122,12 +122,20 @@ button {
     flex-wrap: wrap;
 }
 
+ /* mobile view */
 .container .card {
     transition: transform .8s ease-in;
     background-color: white;
-    flex: 50%;
+    flex: 100%;
 }
+/* tablet viwe */
 @media (min-width: 500px) { 
+    .container .card {
+        flex: 50%;
+    }
+ }
+ /* desktop view */
+ @media (min-width: 800px) { 
     .container .card {
         flex: 25%;
     }
