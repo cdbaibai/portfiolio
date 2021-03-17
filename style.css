@@ -2,18 +2,21 @@ body {
     background-color: #eee;
     padding-top: 340px;
 }
-@media (min-width: 500px) { 
+
+@media (min-width: 500px) {
     body {
-        padding-top: 70px; 
+        padding-top: 70px;
     }
- }
+}
 
 a:visited {
     color: black;
 }
+
 a:hover {
     color: #777;
 }
+
 h1 {
     color: red;
 }
@@ -76,11 +79,13 @@ img {
     flex-flow: column;
     top: 0;
 }
-@media (min-width: 500px) { 
+
+@media (min-width: 500px) {
     .navigation {
         flex-flow: row;
     }
- }
+}
+
 .navigation li {
     padding: 20px;
     background: beige;
@@ -96,6 +101,7 @@ img {
 .navigation li:hover {
     background-color: rgb(155, 59, 59);
 }
+
 .navigation .submenu {
     opacity: 0;
     position: absolute;
@@ -105,10 +111,12 @@ img {
     margin-top: -40px;
     padding: 0%;
 }
+
 .navigation li:hover .submenu {
     opacity: 1;
     margin-top: 0;
 }
+
 button {
     background: grey;
     border: 0;
@@ -116,37 +124,60 @@ button {
     transition: transform .2s ease-in;
     color: white;
 }
+
 .container {
     display: flex;
     background: #ddd;
     flex-wrap: wrap;
 }
 
- /* mobile view */
+/* mobile view */
+
 .container .card {
     transition: transform .8s ease-in;
     background-color: white;
     flex: 100%;
 }
+
 /* tablet viwe */
-@media (min-width: 500px) { 
+
+@media (min-width: 500px) {
     .container .card {
         flex: 50%;
     }
- }
- /* desktop view */
- @media (min-width: 800px) { 
+}
+
+/* desktop view */
+
+@media (min-width: 800px) {
     .container .card {
         flex: 25%;
     }
- }
-.container .card:hover {
-    transform: scale(1.1); 
 }
+
+.container .card:hover {
+    transform: scale(1.1);
+}
+
 .bg {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: -2;
-    opacity: .2;  
+    opacity: .2;
+    animation-name: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(20deg) scale(1.01);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
 }
