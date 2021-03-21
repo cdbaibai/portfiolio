@@ -169,7 +169,18 @@ button {
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
-
+.loader {
+    background-color: red;
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    top:0 ;
+    left: 0;
+    z-index: 1;
+    animation-name: increasesize;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
 @keyframes rotate {
     0% {
         transform: rotate(0) scale(1);
@@ -179,5 +190,19 @@ button {
     }
     100% {
         transform: rotate(0deg) scale(1);
+    }
+}
+@keyframes increasesize {
+    0% {
+        width: 0;
+    }
+    10% {
+        width: 5%;
+    }
+    11% {
+        width: 5%;
+    }
+    100% {
+        width: 100%;
     }
 }
