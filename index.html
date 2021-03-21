@@ -17,14 +17,15 @@
 
 <body>
     <div class="loader"></div>
-    <svg class="progress-ring" height="150" width="150">
-        <circle class="progress-ring__circle" stroke-width="1" fill="transparent" r="52" cx="75" cy="75"
-            stroke="black" />
-    </svg>
     <nav>
 
         <ul class="navigation">
-
+            <li>
+                <svg class="progress-ring" height="40" width="40">
+                    <circle class="progress-ring__circle" stroke-width="1" fill="transparent" r="20" cx="20" cy="20"
+                        stroke="black" />
+                </svg>
+            </li>
             <li><a href="#home">Home</a> </li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a>
@@ -126,15 +127,29 @@
 
 
     <script>
+        //get the around pixel value of circumference
         const circle = document.querySelector('.progress-ring__circle');
         const radius = circle.r.baseVal.value;
         const circumference = radius * 2 * Math.PI;
-        console.log(circumference)
 
 
-        const percent = 50;
-        circle.style.strokeDasharray = `${circumference} ${circumference}`;
-        circle.style.strokeDashoffset = circumference - (circumference / 100 * percent);
+
+        //cat scroll event
+        window.addEventListener("scroll", function (event) {
+            const viewportheight = window.innerHeight
+            const scrollposition = window.pageYOffset
+            const documentheight = document.body.clientHeight
+            //calculate a value between 0 and 1
+            const progress = scrollposition / (documentheight - viewportheight)
+
+
+
+            //sassign style to circle 
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = circumference - (circumference * progress);
+        });
+
+
     </script>
 </body>
 

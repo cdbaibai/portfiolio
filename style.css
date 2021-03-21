@@ -181,6 +181,9 @@ button {
     animation-duration: 2s;
     animation-iteration-count: 1;
 }
+.progress-ring {
+    background-color: #fff3;
+}
 @keyframes rotate {
     0% {
         transform: rotate(0) scale(1);
