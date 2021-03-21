@@ -11,11 +11,16 @@
             color: pink;
         }
     </style>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="loader"></div>
+    <svg class="progress-ring" height="150" width="150">
+        <circle class="progress-ring__circle" stroke-width="1" fill="transparent" r="52" cx="75" cy="75"
+            stroke="black" />
+    </svg>
     <nav>
 
         <ul class="navigation">
@@ -118,6 +123,19 @@
 
     <img id="cat" alt="A image of a kitten" width="50" height="40" src="https://placekitten.com/300/200" />
     <button class="btn">Click me</button>
+
+
+    <script>
+        const circle = document.querySelector('.progress-ring__circle');
+        const radius = circle.r.baseVal.value;
+        const circumference = radius * 2 * Math.PI;
+        console.log(circumference)
+
+
+        const percent = 50;
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = circumference - (circumference / 100 * percent);
+    </script>
 </body>
 
 </html>
