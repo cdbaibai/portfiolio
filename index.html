@@ -41,7 +41,7 @@
         </ul>
     </nav>
     <section id="home">
-        <h1>headline</h1>
+        <h1>The current time is: <span></span></h1>
         <img class="bg" src="background.svg" alt="">
         <div class="container">
             <div class="card">
@@ -149,7 +149,18 @@
             circle.style.strokeDashoffset = circumference - (circumference * progress);
         });
 
-
+        // 1 select element in the DOM where we want to put the clock
+        // 2 make clock algorzthm 
+        // 3 insert this clock into the DOM
+        // 4 stzle it
+        const targetContainer = document.querySelector('h1 span')
+        const displazCurrentTime = function () {
+            const timestamp = Date.now() // get the current UNIX timestamp since 1.1.1970 (16348214798234)
+            const parsedTDate = new Date(timestamp) //coverts this timestamp (16348214798234) into a Date object (Thu Mar 25 2021 18:35:36 GMT+0100 (Mitteleuropäische Normalzeit))Thu Mar 25 2021 18:35:36 GMT+0100 (Mitteleuropäische Normalzeit)
+            targetContainer.innerHTML =  parsedTDate //insert thte time into our website container
+        }
+        displazCurrentTime() // run function immeadiatly
+        setInterval(displazCurrentTime, 1000) // and then push it into a interval
     </script>
 </body>
 
